@@ -1,0 +1,125 @@
+/* Master Styles */
+*{
+    cursor: none;
+}
+
+html, body {
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;}
+
+#content {overflow:auto;}
+#nav, #feature, #footer {
+    margin: 1%;}
+.column1, .column2, .column3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;}
+
+.column3 {margin-right: 0%;}
+
+#feature, .article {
+    height: 100em;
+    margin-bottom: 1em;}
+   
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;}
+
+/* Image settings */
+
+img.align-left {
+    float: left;
+    margin-right:10px;}
+
+img.align-right {
+    float: right;
+    margin-left:10px;}
+
+.animation {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+ }
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+     }
+      
+     100% {
+      transform: translateX(0);
+     }
+    }   
+
+
+/* Nav Styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;}
+
+.left-side {
+    display: flex;}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: rgb(48, 46, 46);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+/* Cursor Styles */
+
+.inner-cursor{
+    position:fixed;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+}
+
+.inner-cursor.grow{
+    width: 25px;
+    height: 25px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    
+}
+
